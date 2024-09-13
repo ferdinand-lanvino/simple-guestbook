@@ -35,7 +35,7 @@ $ php artisan migrate:fresh
 - [X] Tambahkan route name untuk memberi alias pada route
 - [X] Ubah file migrasi untuk menambahkan kolom baru -> email, avatar, phone_number + migrasi ulang (re-migrate)
 - [X] Tambahkan validasi request ketika submit
-- [ ] Pasang Bootstrap 5 + Autentikasi
+- [ ] Pasang Bootstrap 5
 - [ ] Ubah tampilan pada view index & form memakai komponen Bootstrap
 - [ ] Menambahkan reusable layout
   
