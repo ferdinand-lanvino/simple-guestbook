@@ -20,6 +20,11 @@ class GuestController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'message' => 'required',
+        ]);
+
         $guest = Guest::create($request->all());
         return redirect()->route('guest');
     }
