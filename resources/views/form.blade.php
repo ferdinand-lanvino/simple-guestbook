@@ -9,12 +9,20 @@
 </head>
 
 <body>
-    <form action="/store" method="POST">
+    <form action="{{ route('guest.store') }}" method="POST">
         @csrf
         <label for="name">Name</label>
-        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="name" id="name">
+
         <label for="message">Message</label>
-        <textarea name="message" placeholder="Message"></textarea>
+        <textarea name="message" id="message"></textarea>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+
+        <label for="phone_number">Phone Number</label>
+        <input type="text" name="phone_number" id="phone_number">
+
         <button type="submit">Submit</button>
     </form>
 </body>

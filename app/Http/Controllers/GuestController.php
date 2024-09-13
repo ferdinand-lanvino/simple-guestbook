@@ -21,6 +21,6 @@ class GuestController extends Controller
     public function store(Request $request)
     {
         $guest = Guest::create($request->all());
-        return redirect('/');
+        return redirect()->route('guest');
     }
 }

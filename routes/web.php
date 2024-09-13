@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [GuestController::class, 'index']);
-Route::get('/form', [GuestController::class, 'form']);
-Route::post('/store', [GuestController::class, 'store']);
+Route::get('/', [GuestController::class, 'index'])->name('guest');
+Route::get('/form', [GuestController::class, 'form'])->name('guest.form');
+Route::post('/store', [GuestController::class, 'store'])->name('guest.store');

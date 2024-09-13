@@ -32,9 +32,9 @@ $ php artisan migrate:fresh
 - [X] Tambahkan kode html form untuk input data di form.blade.php
 - [X] Tambahkan kode html untuk menampilkan data di index.blade.php
 - [X] Tambahkan method store() + routing untuk menyimpan data Guest
-- [ ] Tambahkan route name untuk memberi alias pada route
-- [ ] Ubah file migrasi untuk menambahkan kolom baru -> email, avatar, phone_number + migrasi ulang (re-migrate)
-- [ ] Tambahkan validasi request ketika submit
+- [X] Tambahkan route name untuk memberi alias pada route
+- [X] Ubah file migrasi untuk menambahkan kolom baru -> email, avatar, phone_number + migrasi ulang (re-migrate)
+- [X] Tambahkan validasi request ketika submit
 - [ ] Pasang Bootstrap 5 + Autentikasi
 - [ ] Ubah tampilan pada view index & form memakai komponen Bootstrap
 - [ ] Menambahkan reusable layout
