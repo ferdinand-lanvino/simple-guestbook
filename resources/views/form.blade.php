@@ -1,39 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Form</title>
-</head>
+@section('content')
 
-<body>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <form action="{{ route('guest.store') }}" method="POST">
-        @csrf
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+    <div class="container">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <form action="{{ route('guest.store') }}" method="POST">
 
-        <label for="message">Message</label>
-        <textarea name="message" id="message"></textarea>
-
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email">
-
-        <label for="phone_number">Phone Number</label>
-        <input type="text" name="phone_number" id="phone_number">
-
-        <button type="submit">Submit</button>
-    </form>
-</body>
-
-</html>
+            <div class="row">
+                @csrf
+                <div class="col-12">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" name="name" id="name">
+                </div>
+                <div class="col-12">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" name="message" id="message"></textarea>
+                </div>
+                <div class="col-6">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="text" name="email" id="email">
+                </div>
+                <div class="col-6">
+                    <label for="phone_number">Phone Number</label>
+                    <input class="form-control" type="text" name="phone_number" id="phone_number">
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+@endsection

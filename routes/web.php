@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [GuestController::class, 'index'])->name('guest');
-Route::get('/form', [GuestController::class, 'form'])->name('guest.form');
-Route::post('/store', [GuestController::class, 'store'])->name('guest.store');
+Route::group(['middleware' => 'auth'], function () {
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [GuestController::class, 'index'])->name('guest');
+    Route::get('/form', [GuestController::class, 'form'])->name('guest.form');
+    Route::post('/store', [GuestController::class, 'store'])->name('guest.store');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

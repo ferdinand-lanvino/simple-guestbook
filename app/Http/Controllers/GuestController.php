@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class GuestController extends Controller
 {
+
+    // Boleh juga menggunakan middleware di dalam controller
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     public function index()
     {
         $guests = Guest::all();
